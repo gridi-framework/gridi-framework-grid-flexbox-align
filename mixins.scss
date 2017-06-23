@@ -1,0 +1,15 @@
+@mixin row-columns-alignment-class($class) {
+    .row.#{$grid-column-class-prefix}s-align-#{$class},
+    &.#{$grid-column-class-prefix}s-align-#{$class} .row,
+    .#{$grid-column-class-prefix}s-align-#{$class} .row {
+        @content;
+    }
+}
+
+@mixin row-columns-vertical-alignment-class($class) {
+    .row.#{$grid-column-class-prefix}s-vertical-align-#{$class},
+    &.#{$grid-column-class-prefix}s-vertical-align-#{$class} .row,
+    .#{$grid-column-class-prefix}s-vertical-align-#{$class} .row {
+        @content;
+    }
+}

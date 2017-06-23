@@ -1,0 +1,43 @@
+.grid-flexbox {
+    //Columns Horizontal Alignment
+    @include row-columns-alignment-class(start) {
+        @include justify-content(flex-start);
+    }
+
+    @include row-columns-alignment-class(center) {
+        @include justify-content(center);
+    }
+
+    @include row-columns-alignment-class(end) {
+        @include justify-content(flex-end);
+
+        .#{$grid-column-class-prefix} {
+            float: right;
+        }
+    }
+
+    @include row-columns-alignment-class(space-between) {
+        @include justify-content(space-between);
+    }
+
+    @include row-columns-alignment-class(space-around) {
+        @include justify-content(space-around);
+    }
+
+    //Columns Vertical Alignment
+    @include row-columns-vertical-alignment-class(start) {
+        @include align-items(flex-start);
+    }
+
+    @include row-columns-vertical-alignment-class(center) {
+        @include align-items(center);
+    }
+
+    @include row-columns-vertical-alignment-class(end) {
+        @include align-items(flex-end);
+    }
+
+    @include row-columns-vertical-alignment-class(stretch) {
+        @include align-items(stretch);
+    }
+}
