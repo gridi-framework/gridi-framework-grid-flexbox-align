@@ -10,10 +10,6 @@
 
     @include row-columns-alignment-class(end) {
         @include justify-content(flex-end);
-
-        .#{$grid-column-class-prefix} {
-            float: right;
-        }
     }
 
     @include row-columns-alignment-class(space-between) {
@@ -39,5 +35,15 @@
 
     @include row-columns-vertical-alignment-class(stretch) {
         @include align-items(stretch);
+    }
+}
+
+@include old-browsers-style($gridi-framework-grid-flexbox-align-support-old-browsers) {
+    .grid-flexbox {
+        @include row-columns-alignment-class(end) {
+            .#{$grid-column-class-prefix} {
+                float: right;
+            }
+        }
     }
 }
